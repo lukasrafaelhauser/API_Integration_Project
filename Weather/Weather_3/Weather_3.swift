@@ -8,10 +8,11 @@
 
 import Foundation
 
-protocol WeatherGetterDelegate {
+protocol WeatherGetterDe {
     func didGetWeather(weather: Weather)
     func didNotGetWeather(error: NSError)
 }
+
 class WeatherGetter {
     
     private let openWeatherMapBaseURL = "https://api.openweathermap.org/data/2.5/weather"
@@ -68,7 +69,7 @@ class WeatherGetter {
                 }
             }
         }
-
+        
         dataTask.resume()
     }
     
