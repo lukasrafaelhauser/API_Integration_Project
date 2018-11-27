@@ -3,6 +3,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //MARK: Properties
+    
+
+    @IBOutlet weak var munich: UILabel!
+    
+    
+    @IBAction func WeatherButton(_ sender: Any) {
+         munich.text = "5000 Degrees!"
+
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
