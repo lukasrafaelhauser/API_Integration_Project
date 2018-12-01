@@ -127,7 +127,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="gettest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hcB-jj-EQg"/>
+                                    <action selector="getWeatherForCityButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1yY-Eg-Hdp"/>
                                 </connections>
                             </button>
                         </subviews>
