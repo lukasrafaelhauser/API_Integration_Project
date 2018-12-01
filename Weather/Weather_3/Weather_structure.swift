@@ -1,14 +1,6 @@
-//
-//  Weather_structure.swift
-//  Weather_3
-//
-//  Created by Lukas Hauser on 24.11.18.
-//  Copyright © 2018 Lukas Hauser. All rights reserved.
-//
-
 import Foundation
-
-struct Weather {
+ 
+ struct Weather {
     
     let dateAndTime: NSDate
     
@@ -89,4 +81,4 @@ struct Weather {
         sunset = NSDate(timeIntervalSince1970:sysDict["sunset"] as! TimeInterval)
     }
     
-}
+ }
