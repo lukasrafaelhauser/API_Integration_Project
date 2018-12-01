@@ -1,8 +1,14 @@
 import UIKit
 
-class ViewController: UIViewController,
-    WeatherGetterDelegate,
-    UITextFieldDelegate
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+}
+
+
+class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
 {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
@@ -100,21 +106,21 @@ class ViewController: UIViewController,
     // Enable the "Get weather for the city above" button
     // if the city text field contains any text,
     // disable it otherwise.
-    func textField(textField: UITextField,
-                   shouldChangeCharactersInRange range: NSRange,
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
         let prospectiveText = (currentText as NSString).replacingCharacters(
             in: range,
             with: string)
-        getCityWeatherButton.isEnabled = prospectiveText.characters.count > 0
-        print("Count: \(prospectiveText.characters.count)")
+        getCityWeatherButton.isEnabled = prospectiveText.count > 0
+        print("Count: \(prospectiveText.count)")
         return true
     }
     
     // Pressing the clear button on the text field (the x-in-a-circle button
     // on the right side of the field)
-    func textFieldShouldClear(textField: UITextField) -> Bool {
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
         // Even though pressing the clear button clears the text field,
         // this line is necessary. I'll explain in a later blog post.
         textField.text = ""
@@ -125,7 +131,7 @@ class ViewController: UIViewController,
     
     // Pressing the return button on the keyboard should be like
     // pressing the "Get weather for the city above" button.
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         getWeatherForCityButtonTapped(sender: getCityWeatherButton)
         return true
@@ -142,7 +148,7 @@ class ViewController: UIViewController,
     // MARK: - Utility methods
     // -----------------------
     
-    func showSimpleAlert(title title: String, message: String) {
+    func showSimpleAlert(title: String, message: String) {
         let alert = UIAlertController(
             title: title,
             message: message,
@@ -164,7 +170,7 @@ class ViewController: UIViewController,
 }
 
 
-extension String {
+//extension String {
     
     //A handy method for %-encoding strings containing spaces and other
     // characters that need to be converted for use in URLs.
@@ -172,4 +178,8 @@ extension String {
         //return self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLUserAllowedCharacterSet())!
    //}
     
-}
+//}
+
+
+
+
