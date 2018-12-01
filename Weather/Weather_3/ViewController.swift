@@ -41,7 +41,7 @@ class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
         cityTextField.placeholder = "Enter city name"
         cityTextField.delegate = self
         cityTextField.enablesReturnKeyAutomatically = true
-       // getCityWeatherButton.isEnabled = false
+        getCityWeatherButton.isEnabled = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,11 +52,17 @@ class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
     // MARK: - Button events
     // ---------------------
     
-    @IBAction func getWeatherForCityButtonTapped(sender: UIButton) {
-        guard let text = cityTextField.text, !text.isEmpty else {
-            return
-        }
-        weather.getWeatherByCity(city: cityTextField.text!)
+    //@IBAction func getWeatherForCityButtonTapped(sender: UIButton) {
+        //guard let text = cityTextField.text, !text.isEmpty else {
+            //return
+        //}
+        //weather.getWeatherByCity(city: cityTextField.text!)
+    //}
+    
+    
+@IBAction func getWeatherForCityButtonTapped(sender: UIButton) {guard let text = cityTextField.text, !text.isEmpty else{
+    return}
+    weather.getWeatherByCity(city: cityTextField.text!)
     }
     
     

@@ -122,6 +122,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCp-8i-nKd">
+                                <rect key="frame" x="151" y="560" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="gettest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hcB-jj-EQg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -130,6 +138,7 @@
                         <outlet property="cityLabel" destination="q27-DY-6rb" id="lPR-cH-Tqn"/>
                         <outlet property="cityTextField" destination="Nez-K1-5zt" id="d6I-p8-Yl1"/>
                         <outlet property="cloudCoverLabel" destination="KdG-ln-0Bc" id="HIv-Gn-Aws"/>
+                        <outlet property="getCityWeatherButton" destination="pCp-8i-nKd" id="QFg-2W-BeV"/>
                         <outlet property="humidityLabel" destination="cG9-VN-Otr" id="B1y-jf-fQr"/>
                         <outlet property="rainLabel" destination="Q1J-9M-h11" id="UXJ-3W-RuT"/>
                         <outlet property="temperatureLabel" destination="jzw-sL-cvu" id="v4S-cK-kb6"/>
