@@ -3,7 +3,6 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 }
 
@@ -42,7 +41,7 @@ class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
         cityTextField.placeholder = "Enter city name"
         cityTextField.delegate = self
         cityTextField.enablesReturnKeyAutomatically = true
-        getCityWeatherButton.isEnabled = false
+       // getCityWeatherButton.isEnabled = false
     }
     
     override func didReceiveMemoryWarning() {
