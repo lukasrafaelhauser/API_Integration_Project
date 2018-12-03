@@ -9,6 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
 {
+    @IBOutlet weak var Header: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -23,6 +24,7 @@ class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
     @IBOutlet weak var WindSign: UILabel!
     @IBOutlet weak var RainSign: UILabel!
     @IBOutlet weak var HumiditySign: UILabel!
+
     
     var weather: WeatherGetter!
     
@@ -80,6 +82,7 @@ class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
     WindSign.isHidden = false
     RainSign.isHidden = false
     HumiditySign.isHidden = false
+    Header.isHidden = true
     
     }
 
