@@ -18,6 +18,11 @@ class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var getCityWeatherButton: UIButton!
+    @IBOutlet weak var TemperatureSign: UILabel!
+    @IBOutlet weak var CloudSign: UILabel!
+    @IBOutlet weak var WindSign: UILabel!
+    @IBOutlet weak var RainSign: UILabel!
+    @IBOutlet weak var HumiditySign: UILabel!
     
     var weather: WeatherGetter!
     
@@ -63,6 +68,19 @@ class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
 @IBAction func getWeatherForCityButtonTapped(sender: UIButton) {guard let text = cityTextField.text, !text.isEmpty else{
     return}
     weather.getWeatherByCity(city: cityTextField.text!)
+    TemperatureSign.isHidden = false
+    cityLabel.isHidden = false
+    weatherLabel.isHidden = false
+    temperatureLabel.isHidden = false
+    cloudCoverLabel.isHidden = false
+    windLabel.isHidden = false
+    rainLabel.isHidden = false
+    humidityLabel.isHidden = false
+    CloudSign.isHidden = false
+    WindSign.isHidden = false
+    RainSign.isHidden = false
+    HumiditySign.isHidden = false
+    
     }
 
     
