@@ -24,7 +24,8 @@ class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
     @IBOutlet weak var WindSign: UILabel!
     @IBOutlet weak var RainSign: UILabel!
     @IBOutlet weak var HumiditySign: UILabel!
-
+    @IBOutlet weak var ImageOne: UIImageView!
+    @IBOutlet weak var ImageTwo: UIImageView!
     
     var weather: WeatherGetter!
     
@@ -97,6 +98,8 @@ class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
         // This method is called asynchronously, which means it won't execute in the main queue.
         // ALl UI code needs to execute in the main queue, which is why we're wrapping the code
         // that updates all the labels in a dispatch_async() call.
+        
+       
         DispatchQueue.main.async(execute: {
             self.cityLabel.text = weather.city
             self.weatherLabel.text = weather.weatherDescription
@@ -113,8 +116,17 @@ class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
             
             self.humidityLabel.text = "\(weather.humidity)%"
         })
+        DispatchQueue.main.async {
+            if (Int(round(weather.tempCelsius))) < 15 {
+                self.ImageOne.isHidden = true
+                self.ImageTwo.isHidden = false
+            } else {
+                self.ImageOne.isHidden = false
+                self.ImageTwo.isHidden = true
+            }
+        }
+
     }
-    
     func didNotGetWeather(error: Error) {
         // This method is called asynchronously, which means it won't execute in the main queue.
         // ALl UI code needs to execute in the main queue, which is why we're wrapping the call
