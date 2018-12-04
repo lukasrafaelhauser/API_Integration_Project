@@ -182,6 +182,8 @@
                         <outlet property="CloudSign" destination="8MM-DV-s7g" id="J4F-Yu-WSr"/>
                         <outlet property="Header" destination="G8C-Fn-Em9" id="JUl-U4-gmb"/>
                         <outlet property="HumiditySign" destination="8Nb-dH-eZt" id="bPQ-tj-JQG"/>
+                        <outlet property="ImageOne" destination="bbB-4s-NTQ" id="YdW-1b-JRk"/>
+                        <outlet property="ImageTwo" destination="Edn-w4-ye5" id="VYm-ms-mQh"/>
                         <outlet property="RainSign" destination="4OC-7B-JHj" id="kkh-y3-rgr"/>
                         <outlet property="TemperatureSign" destination="sLk-Nz-aeM" id="Mdq-8T-0zM"/>
                         <outlet property="WindSign" destination="AhA-BO-JFm" id="sFS-gX-EzK"/>
