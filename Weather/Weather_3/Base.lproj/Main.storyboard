@@ -26,6 +26,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.60241866438356162" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="max-bender-510413-unsplash-1" translatesAutoresizingMaskIntoConstraints="NO" id="DlF-BP-yd4">
+                                <rect key="frame" x="0.0" y="-2" width="383" height="669"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q27-DY-6rb">
                                 <rect key="frame" x="59" y="184" width="257" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -183,6 +188,7 @@
                         <outlet property="Header" destination="G8C-Fn-Em9" id="JUl-U4-gmb"/>
                         <outlet property="HumiditySign" destination="8Nb-dH-eZt" id="bPQ-tj-JQG"/>
                         <outlet property="ImageOne" destination="bbB-4s-NTQ" id="YdW-1b-JRk"/>
+                        <outlet property="ImageThree" destination="DlF-BP-yd4" id="W3a-IP-8iQ"/>
                         <outlet property="ImageTwo" destination="Edn-w4-ye5" id="VYm-ms-mQh"/>
                         <outlet property="RainSign" destination="4OC-7B-JHj" id="kkh-y3-rgr"/>
                         <outlet property="TemperatureSign" destination="sLk-Nz-aeM" id="Mdq-8T-0zM"/>
@@ -205,6 +211,7 @@
     </scenes>
     <resources>
         <image name="kenrick-mills-728501-unsplash" width="5462" height="8192"/>
+        <image name="max-bender-510413-unsplash-1" width="2448" height="2448"/>
         <image name="patrick-tomasso-352179-unsplash" width="3024" height="4032"/>
     </resources>
 </document>
