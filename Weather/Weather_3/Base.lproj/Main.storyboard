@@ -179,6 +179,10 @@
                                     <action selector="getWeatherForCityButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1yY-Eg-Hdp"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clipart-christmas-flower-and-ribbon-png-14" translatesAutoresizingMaskIntoConstraints="NO" id="7fF-G3-zYU">
+                                <rect key="frame" x="0.0" y="534" width="376" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -210,6 +214,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clipart-christmas-flower-and-ribbon-png-14" width="6234" height="2234"/>
         <image name="kenrick-mills-728501-unsplash" width="5462" height="8192"/>
         <image name="max-bender-510413-unsplash-1" width="2448" height="2448"/>
         <image name="patrick-tomasso-352179-unsplash" width="3024" height="4032"/>
