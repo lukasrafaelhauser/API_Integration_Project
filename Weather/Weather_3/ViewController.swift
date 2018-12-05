@@ -26,7 +26,7 @@ class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
     @IBOutlet weak var HumiditySign: UILabel!
     @IBOutlet weak var ImageOne: UIImageView!
     @IBOutlet weak var ImageTwo: UIImageView!
-    
+    @IBOutlet weak var ImageThree: UIImageView!
     var weather: WeatherGetter!
     
     
@@ -120,9 +120,15 @@ class ViewController: UIViewController,WeatherGetterDelegate,UITextFieldDelegate
             if (Int(round(weather.tempCelsius))) < 15 {
                 self.ImageOne.isHidden = true
                 self.ImageTwo.isHidden = false
+                self.ImageThree.isHidden = true
+            } else if (Int(weather.cloudCover)) > 50 {
+                self.ImageThree.isHidden = false
+                self.ImageOne.isHidden = true
+                self.ImageTwo.isHidden = true
             } else {
                 self.ImageOne.isHidden = false
                 self.ImageTwo.isHidden = true
+                self.ImageThree.isHidden = true
             }
         }
 
